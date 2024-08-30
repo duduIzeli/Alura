@@ -5,7 +5,7 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #131212;
     color: #fff;
     padding: 10px;
     text-align: center;
@@ -15,7 +15,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #444;
+    background: #fffefe;
     color: #fff;
     padding: 10px;
 }

@@ -1,140 +1,58 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site sobre Futebol</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #444;
-            color: #fff;
-            padding: 10px;
-        }
-        .menu-hamburguer {
-            display: none;
-        }
-        .menu-cascata {
-            display: flex;
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-        .menu-cascata li {
-            margin: 0 10px;
-            position: relative;
-        }
-        .menu-cascata a {
-            color: #fff;
-            text-decoration: none;
-        }
-        .menu-cascata ul {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: #555;
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-        .menu-cascata li:hover > ul {
-            display: block;
-        }
-        .menu-cascata ul li {
-            padding: 10px;
-        }
-        .menu-cascata ul li a {
-            color: #fff;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            position: absolute;
-            width: 100%;
-            bottom: 0;
-        }
-        @media (max-width: 768px) {
-            .menu-hamburguer {
-                display: block;
-                cursor: pointer;
-            }
-            .menu-cascata {
-                display: none;
-                flex-direction: column;
-            }
-            .menu-cascata.active {
-                display: flex;
-            }
-        }
-    </style>
+    <title>Site de Futebol</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Cabeçalho -->
     <header>
-        <h1>Futebol - O Esporte do Futuro</h1>
+        <div class="logo">Futebol</div>
+        <nav>
+            <ul class="menu-hamburguer">
+                <li><a href="#" class="hamburguer-icon">&#9776;</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Início</a></li>
+                        <li><a href="#">Times</a></li>
+                        <li><a href="#">Campeonatos</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="menu-cascata">
+                <li><a href="#"><img src="imagens/home.png" alt="Início" class="icon"> Início</a></li>
+                <li class="submenu">
+                    <a href="#"><img src="imagens/team.png" alt="Times" class="icon"> Times</a>
+                    <ul>
+                        <li><a href="#">Time A</a></li>
+                        <li><a href="#">Time B</a></li>
+                        <li><a href="#">Time C</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><img src="imagens/trophy.png" alt="Campeonatos" class="icon"> Campeonatos</a></li>
+                <li><a href="#"><img src="imagens/contact.png" alt="Contato" class="icon"> Contato</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <div class="menu-hamburguer" onclick="toggleMenu()">☰</div>
-        <ul class="menu-cascata" id="menu">
-            <li><a href="#">Início</a></li>
-           
-        </style>
-            <img src="futebol.png" class="img"/>
+    <!-- Conteúdo Principal -->
+    <main>
+        <h1>Bem-vindo ao Site de Futebol</h1>
+        <img src="imagens/destaque.jpg" alt="Futebol" class="imagem-destaque">
+        <p>Aqui você encontra as últimas novidades sobre os maiores times e campeonatos de futebol do mundo.</p>
+    </main>
 
-            <li><a href="#">Sobre</a></li>
-            <li>
-                <a href="#">Jogos</a>
-                <ul>
-                        <style>
-                          div {
-                            height: 100vh;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                          }
-
-                           
-                           .img{ 
-                                height: 400px ;
-                                width:800px;
-                                object-fit: cover;
-
-                            }
-                        </style>
-
-
-                    <img src="atlhtico" class="img"/>
-
-
-
-                </ul>
-            </li>
-            <li><a href="#">Contato</a></li>
-        </ul>
-    </nav>
+    <!-- Rodapé -->
     <footer>
-        <p>Desenvolvido por: Eduardo Izeli e Wesley</p>
+        <p>Desenvolvido por: João, Maria, Pedro</p>
     </footer>
+
     <script>
-        function toggleMenu() {
-            document.getElementById('menu').classList.toggle('active');
-        }
+        document.querySelector('.hamburguer-icon').addEventListener('click', function() {
+            document.querySelector('.dropdown-menu').classList.toggle('show');
+        });
     </script>
 </body>
 </html>
